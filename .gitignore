@@ -1,0 +1,21 @@
+# Bỏ qua thư mục .vs (Visual Studio)
+.vs/
+
+# Bỏ qua các tệp tạm thời của hệ điều hành
+*.log
+*.tmp
+
+# Bỏ qua các tệp binary và build
+bin/
+obj/
+*.exe
+*.dll
+
+# Bỏ qua tệp cấu hình người dùng Visual Studio
+*.user
+*.suo
+*.cache
+
+# Bỏ qua các tệp của IDE khác
+.idea/
+.vscode/
