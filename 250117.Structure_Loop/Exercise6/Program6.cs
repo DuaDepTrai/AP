@@ -25,7 +25,7 @@ namespace FibonacciSequence
 
         static void PrintFibonacci(int n)
         {
-            int a = 0, b = 1;
+            int a = 1, b = 1;
 
             for (int i = 0; i < n; i++)
             {

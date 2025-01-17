@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TriangleStar
+namespace TriangleNumber
 {
     class Program4
     {
