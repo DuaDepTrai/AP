@@ -23,17 +23,16 @@ namespace FibonacciSequence
             Console.ReadKey();
         }
 
-        // Hàm in n số Fibonacci đầu tiên
         static void PrintFibonacci(int n)
         {
-            int a = 0, b = 1; // Số Fibonacci đầu tiên (F0 = 0, F1 = 1)
+            int a = 0, b = 1;
 
             for (int i = 0; i < n; i++)
             {
-                Console.Write(a + " "); // In số Fibonacci hiện tại
-                int temp = a + b; // Tính số Fibonacci tiếp theo
-                a = b; // Cập nhật giá trị a
-                b = temp; // Cập nhật giá trị b
+                Console.Write(a + " ");
+                int temp = a + b; 
+                a = b; 
+                b = temp;
             }
         }
     }
