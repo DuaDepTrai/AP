@@ -44,6 +44,8 @@ namespace CompareArray
             Console.WriteLine("\nArray 1 (Common Elements): " + string.Join(" ", commonElements));
             Console.WriteLine("Array 2 (Elements in A but not in B): " + string.Join(" ", onlyInA));
             Console.WriteLine("Array 3 (Elements in B but not in A): " + string.Join(" ", onlyInB));
+
+            Console.ReadKey();
         }
     }
 

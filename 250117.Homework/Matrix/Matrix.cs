@@ -92,6 +92,8 @@ namespace Matrix
                         break;
                 }
             } while (pick != 3);
+
+            Console.ReadKey();
         }
     }
 }

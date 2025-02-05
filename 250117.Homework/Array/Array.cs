@@ -196,6 +196,8 @@ namespace Array
                         break;
                 }
             } while (pick != 8);
+
+            Console.ReadKey();
         }
     }
 }

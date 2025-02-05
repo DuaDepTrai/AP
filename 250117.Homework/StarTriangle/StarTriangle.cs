@@ -21,6 +21,8 @@ namespace StarTriangle
                 }
                 Console.WriteLine();
             }
+
+            Console.ReadKey();
         }
     }
 }
