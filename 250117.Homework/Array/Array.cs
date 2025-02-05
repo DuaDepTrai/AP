@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Array
 {
-    class Program1
+    class Array
     {
         // Revered Array
         static void ReversedArray(List<int> array)

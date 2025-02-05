@@ -1,24 +1,27 @@
 ﻿using System;
-
-class StarTriangle
+namespace StarTriangle
 {
-    static void Main()
+    class StarTriangle
     {
-        Console.Write("Enter number of rows: ");
-        int rows = int.Parse(Console.ReadLine());
-
-        for (int i = 1; i <= rows; i++)
+        static void Main()
         {
-            for (int j = 1; j <= rows - i; j++)
-            {
-                Console.Write(" ");
-            }
+            Console.Write("Enter number of rows: ");
+            int rows = int.Parse(Console.ReadLine());
 
-            for (int j = 1; j <= i; j++)
+            for (int i = 1; i <= rows; i++)
             {
-                Console.Write("* ");
+                for (int j = 1; j <= rows - i; j++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
             }
-            Console.WriteLine();
         }
     }
 }
+
