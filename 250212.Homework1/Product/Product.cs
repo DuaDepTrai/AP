@@ -18,7 +18,7 @@ namespace ProductManagement
             rateCount = 0;
         }
 
-        public void AddRating(int rating)
+        public void addRating(int rating) 
         {
             if (rating < 1 || rating > 5) return;
             if (rateCount < Rate.Length) Rate[rateCount++] = rating;
@@ -35,9 +35,9 @@ namespace ProductManagement
         public void ViewInfo()
         {
             Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"Price: {Price}$");
+            Console.WriteLine($"Price: {Price}");
             Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Average Rating: {GetAverageRating():0.00}");
+            Console.WriteLine($"Average Rating: {GetAverageRating(): 0.00}");
         }
     }
 }
