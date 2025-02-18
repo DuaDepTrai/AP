@@ -11,7 +11,7 @@ namespace _250214.Assignment10
         public Duck():base() { }
         public Duck(int id, string name):base(id, name) { }
 
-        public void Speak()
+        public override void Speak()
         {
             Console.WriteLine("Quac quac quac...");
         }

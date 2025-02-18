@@ -13,7 +13,7 @@
             this.name = name;
         }
 
-        public void Speak()
+        public virtual void Speak()
         {
             Console.WriteLine("Sound.....");
         }

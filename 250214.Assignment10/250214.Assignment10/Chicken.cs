@@ -12,7 +12,7 @@ namespace _250214.Assignment10
 
         public Chicken(int id, string name) : base(id, name) { }
 
-        public void Speak()
+        public override void Speak()
         {
             Console.WriteLine("oOoOoOo");
         }

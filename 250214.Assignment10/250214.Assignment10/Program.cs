@@ -10,39 +10,50 @@ namespace _250214.Assignment10
     {
         static void Main(string[] args)
         {
-            Coop coop = new Coop(1, "Chuong");
+            Farmhouse farmhouse = new Farmhouse();
             int pick;
 
             do
             {
-                Console.WriteLine("-----\nMENU:");
-                Console.WriteLine("1. Add a chicken");
-                Console.WriteLine("2. Add a duck");
-                Console.WriteLine("3. Show all poultries");
+                Console.WriteLine("\n----- MENU -----");
+                Console.WriteLine("1. Add a new coop");
+                Console.WriteLine("2. Remove a coop");
+                Console.WriteLine("3. Add a new poultry");
                 Console.WriteLine("4. Remove a poultry");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("5. Show all poultries");
+                Console.WriteLine("6. Poultries reply in chorus");
+                Console.WriteLine("7. Exit");
                 Console.Write("Choose an option: ");
                 pick = int.Parse(Console.ReadLine());
 
                 switch (pick) 
                 { 
                     case 1:
-                        coop.AddAChicken();
+                        farmhouse.AddACoop();
                         break;
                     case 2:
-                        coop.AddADuck();
+                        farmhouse.RemoveACoop();
                         break;
                     case 3:
-                        coop.Contain();
+                        farmhouse.AddAPoultry();
                         break;
                     case 4:
-                        coop.RemoveAPoultry();
+                        farmhouse.RemoveAPoultry();
                         break;
                     case 5:
+                        farmhouse.Show();
+                        break;
+                    case 6:
+                        farmhouse.ToSpeakInChorus();
+                        break;
+                    case 7:
                         Console.WriteLine("Exit program. Thank you!");
                         return;
+                    default:
+                        Console.WriteLine("Invalid choice, please try again!");
+                        break;
                 }
-            } while (pick != 5);
+            } while (pick != 7);
 
             Console.ReadKey();
         }
