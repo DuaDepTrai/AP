@@ -31,6 +31,7 @@ namespace _250214.Assignment10
 
         public void Contain()
         {
+            Console.WriteLine();
             foreach (Poultry item in arrPoultry)
             {
                 item.Display();
