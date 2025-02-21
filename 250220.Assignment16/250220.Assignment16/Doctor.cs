@@ -13,7 +13,9 @@ namespace _250220.Assignment16
         public DateTime Birthday { get; set; }
         public string Speciality { get; set; }
         public string Email { get; set; }
-        public int Rank { set {  rank = value; } }
+
+        public int _Rank;
+        public int Rank { set {  _Rank = value; } }
 
         public Doctor(string name, DateTime birthday, string speciality, string email, int rank)
         {

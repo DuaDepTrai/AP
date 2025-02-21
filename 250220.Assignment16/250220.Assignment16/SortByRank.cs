@@ -13,7 +13,7 @@ namespace _250220.Assignment16
         {
             Doctor d1 = (Doctor)x;
             Doctor d2 = (Doctor)y;
-            return d1.getRank().CompareTo((int)d2.getRank());
+            return d1._Rank.CompareTo(d2._Rank);
         }
     }
 }
