@@ -62,7 +62,7 @@ namespace _250220.Assignment16
                     case 2:
                         if (manager.IsEmpty())
                         {
-                            Console.WriteLine("No doctor in list")
+                            Console.WriteLine("No doctor in list");
                         } 
                         else 
                         { 
