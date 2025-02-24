@@ -8,15 +8,16 @@ namespace NSBooks
 {
     internal interface IBook
     {
-        int ID { get; set; }
+        int ID { get; }
         string Name { get; set; }
         DateTime PublishDate { get; set; }
         string Author { get; set; }
         string Language { get; set; }
         float AveragePrice { get; }
 
-        float this [int id] { get; set; }
+        int? this [int index] { get; set; }
 
         void Display();
+        void Calculate();
     }
 }

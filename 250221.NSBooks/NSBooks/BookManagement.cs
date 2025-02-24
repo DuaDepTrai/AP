@@ -11,37 +11,66 @@ namespace NSBookTest
 {
     internal class BookManagement
     {
-        private ArrayList bookList = new ArrayList();
+        private Dictionary<int, IBook> bookList = new Dictionary<int, IBook>();
 
         public void AddBook()
         {
-            Console.WriteLine("Enter Book's Name: ");
+            Console.Write("Enter Book's Name: ");
             string name = Console.ReadLine();
 
-            Console.WriteLine("Enter Publish Date: ");
+            Console.Write("Enter Publish Date: ");
             DateTime pbDate;
             while (!DateTime.TryParse(Console.ReadLine(), out pbDate))
             {
                 Console.WriteLine("Invalid format, please try again");
             }
 
-            Console.WriteLine("Enter Author: ");
+            Console.Write("Enter Author: ");
             string author = Console.ReadLine();
 
-            Console.WriteLine("Enter Language: ");
+            Console.Write("Enter Language: ");
             string language = Console.ReadLine();
 
             Book book = new Book(name, pbDate, author, language);
 
+
+
             for (int i=0; i<5; i++)
             {
-                Console.WriteLine($"Enter price in store {i}: ");
-                                
+                Console.Write($"Enter price in store {i+1}: ");
+                int price;
+                while (!int.TryParse(Console.ReadLine(),out price) || price < 0) 
+                { 
+                    Console.WriteLine("Invalid price, try again"); 
+                }
+                book[i] = price;
             }
 
-            bookList.Add( book );
+            bookList[book.ID] = book;
+            Console.WriteLine($"Book ID {book.ID} added successfully");
         }
 
-        public 
+        public void DisplayBooks()
+        {
+            if (bookList.Count == 0)
+            {
+                Console.WriteLine("No books avaiable");
+                return;
+            }
+
+            foreach (var book in bookList.Values) 
+            {
+                book.Display();
+            }
+        }
+
+        public void CalculateAveragePrice()
+        {
+            foreach (var book in bookList.Values)
+            {
+                book.Calculate();
+                book.Display();
+            }
+        }
     }
 }
