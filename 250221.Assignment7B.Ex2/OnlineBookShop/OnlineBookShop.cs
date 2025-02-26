@@ -83,7 +83,7 @@ namespace OnlineBookShop
             Console.Write("Enter Book ID to Change Selling Price: ");
             string ChangedID = Console.ReadLine();
 
-            if (BookStorage.isBook(ChangeID))
+            if (BookStorage.isBook(ChangedID))
             {
                 for (int i = 0; i <= BookStorage.Count; i++)
                 {
