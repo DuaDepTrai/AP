@@ -68,11 +68,11 @@ namespace OnlineBookShop
                         BookStorage.RemoveABook(SellingID);
                         break;
                     }
-                    else 
-                    {
-                        Console.WriteLine("Book not found");
-                    }
                 }
+            }
+            else
+            {
+                Console.WriteLine("Book not found");
             }
         }
 
@@ -81,13 +81,13 @@ namespace OnlineBookShop
             ShowDetail();
 
             Console.Write("Enter Book ID to Change Selling Price: ");
-            string ChangeID = Console.ReadLine();
+            string ChangedID = Console.ReadLine();
 
             if (BookStorage.isBook(ChangeID))
             {
                 for (int i = 0; i <= BookStorage.Count; i++)
                 {
-                    if (BookStorage[i].ID.Equals(ChangeID))
+                    if (BookStorage[i].ID.Equals(ChangedID))
                     {
                         Console.Write("Enter New Selling Price: ");
                         double newPrice;
