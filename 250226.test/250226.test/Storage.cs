@@ -6,22 +6,33 @@ using System.Threading.Tasks;
 
 namespace _250226.test
 {
-    internal class Storage:IStorage
+    internal class Storage : IStorage
     {
-        private int _Count = 0;
         private Book[] BookStore = new Book[100];
-
         public Book this[int index]
-        {
-            get { return BookStore[index]; }
-            set { BookStore[index] = value; }
-        }
-        public int Count 
         {
             get
             {
-                return _Count;
+                if (index < 0 || index >= BookStore.Length)
+                {
+                    return null;
+                }
+                return BookStore[index];
             }
+            set
+            {
+                if (index < 0 || index >= BookStore.Length)
+                {
+                    BookStore[index] = null;
+                }
+                BookStore[index] = value;
+            }
+        }
+
+        private int _Count = 0;
+        public int Count
+        {
+            get { return _Count; }
             set
             {
                 _Count = value;
@@ -48,33 +59,48 @@ namespace _250226.test
 
             Book book = new Book();
             book.SetDetail(name, authorName, subject, buyingPrice);
-            BookStore[_Count++]=book;
+            BookStore[_Count++] = book;
         }
 
-        public void RemoveABook(string id) 
+        public void RemoveABook(string id)
         {
-            for (int i = 0; i < BookStore.Length; i++) 
+            for (int i = 0; i < _Count; i++)
             {
-                if (BookStore[i] != null && BookStore[i].ID.Equals(id)) {
-                    for (int j = i; j < BookStore.Length; j++)
+                if (BookStore[i] != null && BookStore[i].ID.Equals(id))
+                {
+                    for (int j = i; j < _Count; j++)
                     {
-                        BookStore[j] = BookStore[j+1];
+                        BookStore[j] = BookStore[j + 1];
                         _Count--;
                         Console.WriteLine("Book removed successfully");
                     }
                 }
-                else
-                {
-                    Console.WriteLine("Book not found");
-                }
+                //else
+                //{
+                //    Console.WriteLine("Book not found");
+                //}
             }
+            //foreach (Book book in BookStore)
+            //{
+            //    if (book != null && book.ID.Equals(id))
+            //    {
+            //        BookStore.ToList().Remove(book);
+            //        Console.WriteLine("Book removed successfully");
+            //        break;
+            //    }
+            //    //else
+            //    //{
+            //    //    Console.WriteLine("Book not found");
+            //    //}
+            //}
         }
 
         public bool IsABook(string id)
         {
-            for (int i = 0; i < BookStore.Length; i++)
+            foreach (Book book in BookStore)
             {
-                if (BookStore[i] != null && BookStore[i].ID.Equals(id)) {
+                if (book != null && book.ID.Equals(id))
+                {
                     return true;
                 }
             }
@@ -83,7 +109,7 @@ namespace _250226.test
 
         public Storage()
         {
-            _Count= 0;
+            _Count = 0;
             BookStore = new Book[100];
         }
     }

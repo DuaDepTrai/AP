@@ -15,7 +15,11 @@ namespace OnlineBookShop
         public void ImportBook()
         {
             Console.Write("Enter Number of Books: ");
-            int n = int.Parse(Console.ReadLine());
+            int n;
+            while (!int.TryParse(Console.ReadLine(), out n))
+            {
+                Console.WriteLine("Invalid input, try again");
+            }
             for (int i = 0; i < n; i++)
             {
                 Console.WriteLine($"---\nAdd Information of Book {i + 1}:");

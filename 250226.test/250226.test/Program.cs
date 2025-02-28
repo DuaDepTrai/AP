@@ -30,7 +30,7 @@ namespace OnlineBookShop
                             Console.WriteLine("=====\nADMIN MENU");
                             Console.WriteLine("1. Import Books To Store");
                             Console.WriteLine("2. Show The Store In Detail");
-                            Console.WriteLine("3. Change A Book Selling Price");
+                            Console.WriteLine("3. Change A Book's Selling Price");
                             Console.WriteLine("4. Show Profit");
                             Console.WriteLine("5. Back");
                             Console.Write("Choose an option: ");

@@ -3,37 +3,42 @@
     public class Book : IBook
     {
         private static int _Count = 0;
+
         private string _ID;
-        private string _Name;
-        private string _AuthorName;
-        private string _Subject;
-        private double _BuyingPrice;
-        private double _SellingPrice;
         public string ID
         {
             get { return _ID; }
         }
 
+        private string _Name;
         public string Name 
         {
             get { return _Name; }
             set { Name = value; }
         }
+
+        private string _AuthorName;
         public string AuthorName
         {
             get { return _AuthorName; }
             set { AuthorName = value; }
         }
+
+        private string _Subject;
         public string Subject
         {
             get { return _Subject; }
             set { Subject = value; }
         }
+
+        private double _BuyingPrice;
         public double BuyingPrice
         {
             get { return _BuyingPrice; }
             set { BuyingPrice = value; }
         }
+
+        private double _SellingPrice;
         public double SellingPrice
         {
             get { return _SellingPrice; }
