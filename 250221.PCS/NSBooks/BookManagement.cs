@@ -66,7 +66,7 @@ namespace NSBookTest
 
         public void CalculateAveragePrice()
         {
-            foreach (var book in bookList.Values)
+            foreach (Book book in bookList.Values)
             {
                 book.Calculate();
                 book.Display();

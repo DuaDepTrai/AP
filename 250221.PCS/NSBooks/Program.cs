@@ -39,7 +39,7 @@ namespace NSBooksApp
                         Console.WriteLine("Exiting... Thank you!");
                         break;
                     default:
-                        Console.WriteLine("Invalid choice, try again");
+                        Console.WriteLine("Invalid input, try again");
                         break;
                 }
             } while (pick != 4);

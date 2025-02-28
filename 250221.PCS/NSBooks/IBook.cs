@@ -18,6 +18,5 @@ namespace NSBooks
         int? this [int index] { get; set; }
 
         void Display();
-        void Calculate();
     }
 }
