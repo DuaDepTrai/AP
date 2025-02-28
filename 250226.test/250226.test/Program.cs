@@ -105,6 +105,8 @@ namespace OnlineBookShop
                         break;
                 }
             } while (pick != 3);
+
+            Console.ReadKey();
         }
     }
 }

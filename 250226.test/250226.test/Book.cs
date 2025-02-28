@@ -63,21 +63,22 @@
         public Book()
         {
             _Count++;
-            if (_Count < 10)
-            {
-                _ID = "B00" + _Count;
-            }
-            else
-            {
-                if (_Count < 100)
-                {
-                    _ID = "B0" + _Count;
-                }
-                else
-                {
-                    _ID = "B" + _Count;
-                }
-            }
+            _ID = "B00".Substring(0, 4-_Count.ToString().Length) + _Count.ToString();
+            //if (_Count < 10)
+            //{
+            //    ID = "B00" + _Count;
+            //}
+            //else
+            //{
+            //    if (_Count < 100)
+            //    {
+            //        ID = "B0" + _Count;
+            //    }
+            //    else
+            //    {
+            //        ID = "B" + _Count;
+            //    }
+            //}
         }
     }
 }
