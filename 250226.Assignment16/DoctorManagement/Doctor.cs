@@ -4,7 +4,6 @@ namespace DoctorManagement
     public class Doctor : IDoctor
     {
         private static int _Count = 0;
-        private int _rank;
 
         private int _ID;
         private string _Name;
