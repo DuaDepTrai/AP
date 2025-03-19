@@ -14,56 +14,29 @@ namespace DoctorManagement
 
         public int ID 
         { 
-            get 
-            {
-                return _ID;
-            } 
+            get {return _ID;} 
         }
 
         public string Name
         {
-            get
-            {
-                return _Name;
-            }
-            set
-            {
-                _Name = value;
-            }
+            get{return _Name;}
+            set{_Name = value;}
         }
 
         public DateTime Birthday
         {
-            get
-            {
-                return _Birthday;
-            }
-            set
-            {
-                _Birthday = value;
-            }
+            get{return _Birthday;}
+            set{_Birthday = value;}
         }
         public string Speciality
         {
-            get
-            {
-                return _Speciality;
-            }
-            set
-            {
-                _Speciality = value;
-            }
+            get{return _Speciality;}
+            set{_Speciality = value;}
         }
         public string Email
         {
-            get
-            {
-                return _Email;
-            }
-            set
-            {
-                _Email = value;
-            }
+            get{return _Email;}
+            set{_Email = value;}
         }
         public int Rank
         {
