@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoctorManagement
+namespace _250319.Doctor
 {
     interface IDoctor
     {
-        int ID {  get; }
+        int ID { get; }
         string Name { get; set; }
         DateTime Birthday { get; set; }
         string Speciality { get; set; }

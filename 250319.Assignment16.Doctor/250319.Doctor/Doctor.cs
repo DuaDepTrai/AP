@@ -1,79 +1,53 @@
-﻿
-namespace DoctorManagement
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _250319.Doctor
 {
-    public class Doctor : IDoctor
+    internal class Doctor : IDoctor
     {
         private static int _Count = 0;
-
         private int _ID;
         private string _Name;
         private DateTime _Birthday;
         private string _Speciality;
         private string _Email;
         public int _Rank;
+        private string[] PhoneList = new string[3];
 
-        public int ID 
-        { 
-            get 
-            {
-                return _ID;
-            } 
+        public int ID
+        {
+
+            get { return _ID; }
         }
 
         public string Name
         {
-            get
-            {
-                return _Name;
-            }
-            set
-            {
-                _Name = value;
-            }
+            get { return _Name; }
+            set { _Name = value; }
         }
-
         public DateTime Birthday
         {
-            get
-            {
-                return _Birthday;
-            }
-            set
-            {
-                _Birthday = value;
-            }
+            get { return _Birthday; }
+            set { _Birthday = value; }
         }
         public string Speciality
         {
-            get
-            {
-                return _Speciality;
-            }
-            set
-            {
-                _Speciality = value;
-            }
+            get { return _Speciality; }
+            set { _Speciality = value; }
         }
         public string Email
         {
-            get
-            {
-                return _Email;
-            }
-            set
-            {
-                _Email = value;
-            }
+            get { return _Email; }
+            set { _Email = value; }
         }
         public int Rank
         {
-            set
-            {
-                _Rank = value;
-            }
+            set { _Rank = value; }
         }
-
-        private string[] PhoneList = new string[3];
 
         public string this[int index]
         {
@@ -111,10 +85,9 @@ namespace DoctorManagement
             _Email = email;
             _Rank = rank;
         }
-
         public void ShowInfo()
         {
-            Console.WriteLine($"ID: {_ID}, Name: {_Name}, Birthday: {_Birthday:dd/MM/yyyy}, Speciality: {_Speciality}, Email: {_Email}, Rank: {_Rank}");
+            Console.WriteLine($"ID: {_ID} - Name: {_Name} - Birthday: {_Birthday} - Speciality: {_Speciality} - Email: {_Email} - Rank: {_Rank}");
         }
     }
 }
